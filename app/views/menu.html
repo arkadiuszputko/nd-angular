@@ -1,0 +1,5 @@
+<ul class="menu" ng-controller="MenuCtrl">
+    <li ng-repeat="item in items | orderBy:order">
+        <a href="{{item.url}}">{{item.title}}</a>
+    </li>
+</ul>

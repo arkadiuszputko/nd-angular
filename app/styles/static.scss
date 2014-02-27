@@ -1,0 +1,79 @@
+body.static-page {
+    height: auto;
+    position: static;
+
+    > header {
+        height: 150px;
+    }
+    > .container {
+        height: auto;
+        background: #fff;
+        article {
+            > header {
+                background: url('../images/plan.png') no-repeat 0 0;
+                background-size: cover;
+            }
+            &.news > header {
+                background: url('../images/teatr.jpg') no-repeat 0 0;
+                background-size: cover;
+                height: 250px;
+                margin-bottom: 300px;
+            }
+            &.support > header {
+                background: url('../images/cover.png') no-repeat 0 0;
+                background-size: cover;
+            }
+            &.history > header {
+                background: url('../images/dimBW.png') no-repeat 0 0;   
+                background-size: cover;
+            }
+            header {
+                padding: 2em 100px;
+                p {
+                    width: 40%;
+                    text-align: justify;
+                    color: #fff;
+                }
+                h1 {
+                    color: #fff;
+                }
+                ul {
+                    color: #fff;
+                    text-align: left;
+                }
+            }
+            > div.content {
+                text-align: left;
+                padding: 4em 0 4em 200px;
+                text-align: justify;
+                width: 66%;
+                h2 {
+                    font-size: 1em;
+                }
+                ul {
+                    li {
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+            h1 {
+                text-align: left;
+            }
+            footer {
+                position: static;
+                overflow: hidden;
+                padding-bottom: 2em;
+                div {
+                    p {
+                        text-align: left;
+                    }
+                    &.right {
+                        p {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

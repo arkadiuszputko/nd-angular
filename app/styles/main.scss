@@ -1,0 +1,220 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import "bootstrap-sass/lib/bootstrap";
+@import "fonts";
+
+/* Put your CSS here */
+html, body {
+    margin: 0;
+    font-family: "OpenSansLight", Helvetica, Arial, sans-serif;
+}
+
+body.main-page {
+    background: #fafafa;
+    color: #333;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+}
+
+.hero-unit h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+body > header {
+    height: 23%;
+    max-height: 230px;
+    min-height: 150px;
+    background: #1c1918;
+    width: 100%;
+    position: relative;
+
+    #logo {
+        font-family: 'EsenciaRegular';
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        bottom: 33px;
+        left: 100px;
+        font-size: 50px;
+        line-height: 42px;
+    }
+}
+footer {
+    position: relative;
+    width: 100%;
+    height: 17%;
+    box-sizing: border-box;
+    background: #1c1918;
+    padding: 10px 100px 0;
+    div {
+        width: 33%;
+        float: left;
+        &.right {
+            text-align: right;
+        }
+        &.middle {
+            text-align: center;
+        }
+        p {
+            padding: 0;
+            margin: 0 0 2px;
+            color: #606060;
+            font-size: .8em;
+            line-height: 1.2em;
+            strong {
+                color: #c0c0c0;
+            }
+        }
+    }
+}
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 60%;
+    text-align: center;
+    background: #e8b97a;
+}
+.slider {
+    position: relative;
+    height: 100%;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: left 50%;
+            >a, >div {
+                display: table;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                &:hover {
+                    text-decoration: none;
+                }
+                div {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    box-sizing: border-box;
+                    padding: 0 15%;
+                    h2 {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 40px;
+                        text-align: left;
+                    }
+                    p {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        position: relative;
+                        text-align: left;
+                        &.ng-hide {
+                            display: block !important;
+                            left: 100%;
+                        }
+                        &.ng-hide-add,
+                        &.ng-hide-remove
+                        {
+                            -webkit-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                            -moz-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                            -ms-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                            -o-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                            transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                            display: block !important;
+                        }
+
+                        &.ng-hide-add {
+                            left: 0;
+                            &.ng-hide-add-active {
+                                left: -100%;
+                            }
+                        }
+
+                        &.ng-hide-remove {
+                            left: 100%;
+                            &.ng-hide-remove-active {
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &.ng-hide {
+                display: block !important;
+                left: 100%;
+            }
+            &.ng-hide-add,
+            &.ng-hide-remove
+            {
+                -webkit-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                -moz-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                -ms-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                -o-transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                transition: 300ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+                display: block !important;
+            }
+
+            &.ng-hide-add {
+                left: 0;
+                &.ng-hide-add-active {
+                    left: -100%;
+                }
+            }
+
+            &.ng-hide-remove {
+                left: 100%;
+                &.ng-hide-remove-active {
+                    left: 0;
+                }
+            }
+        }
+    }
+    .arrow {
+        display: block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        overflow: hidden;
+        text-indent: -99999em;
+        margin-top: -35px;
+        cursor: pointer;
+        &.right {
+            right: 0;
+            background: url('../images/right-arrow.png') no-repeat 0 0;
+        }
+        &.left {
+            left: 0;
+            background: url('../images/left-arrow.png') no-repeat 0 0;
+        }
+    }
+}
+
+
+@import "menu";
+@import "static";

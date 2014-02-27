@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'EsenciaRegular';
+    src: url('esencia.eot');
+    src: url('esencia.eot') format('embedded-opentype'),
+         url('esencia.woff') format('woff'),
+         url('esencia.ttf') format('truetype'),
+         url('esencia.svg#EsenciaRegular') format('svg');
+}

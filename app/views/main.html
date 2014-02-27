@@ -1,0 +1,14 @@
+<div class="slider" ng-controller="MainCtrl">
+    <ul>
+        <li ng-repeat="slide in slides" ng-hide="!slide.current" style="background-image: url('{{slide.imgUrl}}')">
+            <a href="{{slide.url}}">
+                <div>
+                    <h2>{{slide.title}}</h2>
+                    <p ng-bind-html="slide.excerpt"></p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <a class="arrow left" ng-click="slideLeft()">left</a>
+    <a class="arrow right" ng-click="slideRight()">right</a>
+</div>
